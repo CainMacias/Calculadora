@@ -36,6 +36,12 @@
             label2 = new Label();
             textResultado = new TextBox();
             BtReset = new Button();
+            Operaciones = new GroupBox();
+            Division = new RadioButton();
+            Multiplicacion = new RadioButton();
+            Resta = new RadioButton();
+            Suma = new RadioButton();
+            Operaciones.SuspendLayout();
             SuspendLayout();
             // 
             // textVarA
@@ -74,7 +80,7 @@
             // 
             // BtCalcular
             // 
-            BtCalcular.Location = new Point(500, 51);
+            BtCalcular.Location = new Point(700, 49);
             BtCalcular.Name = "BtCalcular";
             BtCalcular.Size = new Size(94, 29);
             BtCalcular.TabIndex = 4;
@@ -101,7 +107,7 @@
             // 
             // BtReset
             // 
-            BtReset.Location = new Point(500, 102);
+            BtReset.Location = new Point(700, 84);
             BtReset.Name = "BtReset";
             BtReset.Size = new Size(94, 29);
             BtReset.TabIndex = 7;
@@ -109,11 +115,69 @@
             BtReset.UseVisualStyleBackColor = true;
             BtReset.Click += BtReset_Click;
             // 
+            // Operaciones
+            // 
+            Operaciones.Controls.Add(Division);
+            Operaciones.Controls.Add(Multiplicacion);
+            Operaciones.Controls.Add(Resta);
+            Operaciones.Controls.Add(Suma);
+            Operaciones.Location = new Point(390, 49);
+            Operaciones.Name = "Operaciones";
+            Operaciones.Size = new Size(250, 211);
+            Operaciones.TabIndex = 8;
+            Operaciones.TabStop = false;
+            Operaciones.Text = "Operaciones";
+            // 
+            // Division
+            // 
+            Division.AutoSize = true;
+            Division.Location = new Point(10, 123);
+            Division.Name = "Division";
+            Division.Size = new Size(83, 24);
+            Division.TabIndex = 3;
+            Division.TabStop = true;
+            Division.Text = "Division";
+            Division.UseVisualStyleBackColor = true;
+            // 
+            // Multiplicacion
+            // 
+            Multiplicacion.AutoSize = true;
+            Multiplicacion.Location = new Point(10, 93);
+            Multiplicacion.Name = "Multiplicacion";
+            Multiplicacion.Size = new Size(124, 24);
+            Multiplicacion.TabIndex = 2;
+            Multiplicacion.TabStop = true;
+            Multiplicacion.Text = "Multiplicacion";
+            Multiplicacion.UseVisualStyleBackColor = true;
+            // 
+            // Resta
+            // 
+            Resta.AutoSize = true;
+            Resta.Location = new Point(10, 63);
+            Resta.Name = "Resta";
+            Resta.Size = new Size(66, 24);
+            Resta.TabIndex = 1;
+            Resta.TabStop = true;
+            Resta.Text = "Resta";
+            Resta.UseVisualStyleBackColor = true;
+            // 
+            // Suma
+            // 
+            Suma.AutoSize = true;
+            Suma.Location = new Point(10, 33);
+            Suma.Name = "Suma";
+            Suma.Size = new Size(67, 24);
+            Suma.TabIndex = 0;
+            Suma.TabStop = true;
+            Suma.Text = "Suma";
+            Suma.UseVisualStyleBackColor = true;
+            // 
             // Calculadora
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(842, 507);
+            Controls.Add(Operaciones);
             Controls.Add(BtReset);
             Controls.Add(label2);
             Controls.Add(textResultado);
@@ -124,6 +188,8 @@
             Controls.Add(textVarA);
             Name = "Calculadora";
             Text = "Calculadora";
+            Operaciones.ResumeLayout(false);
+            Operaciones.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -138,5 +204,10 @@
         private Label label2;
         private TextBox textResultado;
         private Button BtReset;
+        private GroupBox Operaciones;
+        private RadioButton Division;
+        private RadioButton Multiplicacion;
+        private RadioButton Resta;
+        private RadioButton Suma;
     }
 }
