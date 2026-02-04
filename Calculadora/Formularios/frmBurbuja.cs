@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculadora.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +20,22 @@ namespace Calculadora
 
         private void btnOrdenar_Click(object sender, EventArgs e)
         {
+            Ordenamientos ordenamientos = new Ordenamientos();
             int[] ordenado = new int[dataGridView1.RowCount - 1];
 
             //Cargar el array con los datos del datagridview1
-            for(int i = 0; i < dataGridView1.RowCount; i++)
+            for(int i = 0; i < dataGridView1.RowCount - 1; i++)
             {
                 ordenado[i] = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
+            }
+
+            ordenado = ordenamientos.Burbuja(ordenado);
+
+            dataGridView2.DataSource = ordenado;
+
+            for(int i = 0; i < ordenado.Length; i++)
+            {
+                dataGridView2.Rows[i].Cells[0].Value = ordenado[i];
             }
 
         }
