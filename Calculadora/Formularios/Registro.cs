@@ -23,7 +23,8 @@ namespace Calculadora.Formularios
         {
             persona.Add(new Persona()
             {
-                Nombre = txtNombre.Text = txtApellido.Text,
+                Nombre = txtNombre.Text, 
+                Apellido = txtApellido.Text,
                 Fecha = dateTimePicker1.Value
             });
         }
