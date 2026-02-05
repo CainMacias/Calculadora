@@ -30,15 +30,19 @@
         {
             Registros = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            txtNombre = new TextBox();
-            label1 = new Label();
+            button1 = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            label3 = new Label();
             label2 = new Label();
             txtApellido = new TextBox();
-            label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            label1 = new Label();
+            txtNombre = new TextBox();
+            tabPage2 = new TabPage();
+            dataGridView1 = new DataGridView();
             Registros.SuspendLayout();
             tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // Registros
@@ -50,9 +54,11 @@
             Registros.SelectedIndex = 0;
             Registros.Size = new Size(800, 465);
             Registros.TabIndex = 0;
+            Registros.SelectedIndexChanged += Registros_SelectedIndexChanged;
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(button1);
             tabPage1.Controls.Add(dateTimePicker1);
             tabPage1.Controls.Add(label3);
             tabPage1.Controls.Add(label2);
@@ -66,32 +72,33 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Registro";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
             // 
-            // tabPage2
+            // button1
             // 
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(792, 432);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Mostrar";
-            tabPage2.UseVisualStyleBackColor = true;
+            button1.Location = new Point(631, 345);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 6;
+            button1.Text = "Registrar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // txtNombre
+            // dateTimePicker1
             // 
-            txtNombre.Location = new Point(44, 52);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(224, 27);
-            txtNombre.TabIndex = 0;
+            dateTimePicker1.Location = new Point(44, 265);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(250, 27);
+            dateTimePicker1.TabIndex = 5;
             // 
-            // label1
+            // label3
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(44, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(64, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Nombre";
+            label3.AutoSize = true;
+            label3.Location = new Point(44, 228);
+            label3.Name = "label3";
+            label3.Size = new Size(147, 20);
+            label3.TabIndex = 4;
+            label3.Text = "fecha de Nacimiento";
             // 
             // label2
             // 
@@ -109,21 +116,41 @@
             txtApellido.Size = new Size(224, 27);
             txtApellido.TabIndex = 2;
             // 
-            // label3
+            // label1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(44, 228);
-            label3.Name = "label3";
-            label3.Size = new Size(147, 20);
-            label3.TabIndex = 4;
-            label3.Text = "fecha de Nacimiento";
+            label1.AutoSize = true;
+            label1.Location = new Point(44, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(64, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Nombre";
             // 
-            // dateTimePicker1
+            // txtNombre
             // 
-            dateTimePicker1.Location = new Point(44, 265);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 5;
+            txtNombre.Location = new Point(44, 52);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(224, 27);
+            txtNombre.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(dataGridView1);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(792, 432);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Mostrar";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(-16, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(812, 413);
+            dataGridView1.TabIndex = 0;
             // 
             // Registro
             // 
@@ -136,6 +163,8 @@
             Registros.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -150,5 +179,7 @@
         private Label label1;
         private TextBox txtNombre;
         private DateTimePicker dateTimePicker1;
+        private Button button1;
+        private DataGridView dataGridView1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculadora.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,12 @@ namespace Calculadora
         {
             frmBurbuja burbuja = new frmBurbuja();
             burbuja.Show();
+        }
+
+        private void registroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro registro = new Registro();
+            registro.Show();
         }
     }
 }
