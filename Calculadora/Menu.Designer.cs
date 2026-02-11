@@ -36,6 +36,7 @@
             ordenamientosToolStripMenuItem = new ToolStripMenuItem();
             burbujaToolStripMenuItem = new ToolStripMenuItem();
             registroToolStripMenuItem = new ToolStripMenuItem();
+            editorToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,17 +56,18 @@
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             archivoToolStripMenuItem.Size = new Size(73, 24);
             archivoToolStripMenuItem.Text = "Archivo";
+            archivoToolStripMenuItem.Click += archivoToolStripMenuItem_Click;
             // 
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(121, 26);
+            salirToolStripMenuItem.Size = new Size(224, 26);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registroToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registroToolStripMenuItem, editorToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(107, 24);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -98,6 +100,13 @@
             registroToolStripMenuItem.Text = "Registro";
             registroToolStripMenuItem.Click += registroToolStripMenuItem_Click;
             // 
+            // editorToolStripMenuItem
+            // 
+            editorToolStripMenuItem.Name = "editorToolStripMenuItem";
+            editorToolStripMenuItem.Size = new Size(224, 26);
+            editorToolStripMenuItem.Text = "Editor";
+            editorToolStripMenuItem.Click += editorToolStripMenuItem_Click;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -123,5 +132,6 @@
         private ToolStripMenuItem ordenamientosToolStripMenuItem;
         private ToolStripMenuItem burbujaToolStripMenuItem;
         private ToolStripMenuItem registroToolStripMenuItem;
+        private ToolStripMenuItem editorToolStripMenuItem;
     }
 }

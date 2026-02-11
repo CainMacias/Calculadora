@@ -40,5 +40,16 @@ namespace Calculadora
             Registro registro = new Registro();
             registro.Show();
         }
+
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditor editor = new frmEditor();
+            editor.Show();
+        }
     }
 }
